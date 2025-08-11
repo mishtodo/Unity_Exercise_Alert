@@ -5,6 +5,7 @@ using UnityEngine;
 public class Alert : MonoBehaviour
 {
     [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AlertZone _alertZone;
     [SerializeField] private float _currentVolume = 0f;
     [SerializeField] private float _targetVolume = 0f;
 
@@ -20,19 +21,28 @@ public class Alert : MonoBehaviour
         _audioSource.Play();
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        StartCoroutine();
+        _alertZone.EnterTresspassing += RaiseVolume;
+        _alertZone.ExitTresspassing += LowerVolume;
+    }
+
+    private void OnDisable()
+    {
+        _alertZone.EnterTresspassing -= RaiseVolume;
+        _alertZone.ExitTresspassing -= LowerVolume;
     }
 
     public void RaiseVolume()
     {
         _targetVolume = _maxVolume;
+        StartCoroutine();
     }
 
     public void LowerVolume()
     {
         _targetVolume = _minVolume;
+        StartCoroutine();
     }
 
     public void StopCoroutine()
@@ -52,6 +62,10 @@ public class Alert : MonoBehaviour
         {
             _audioSource.volume = Mathf.MoveTowards(_currentVolume, _targetVolume, _volumeStep * Time.deltaTime);
             _currentVolume = _audioSource.volume;
+
+            if (_audioSource.volume == _minVolume || _audioSource.volume == _maxVolume)
+                StopCoroutine();
+
             yield return null;
         }
     }

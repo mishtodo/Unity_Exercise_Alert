@@ -1,14 +1,16 @@
+using System;
 using UnityEngine;
 
 public class AlertZone : MonoBehaviour 
 {
-    [SerializeField] private Alert _alert;
+    public event Action EnterTresspassing;
+    public event Action ExitTresspassing;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.TryGetComponent<Thief>(out Thief thief))
         {
-            _alert.RaiseVolume();
+            EnterTresspassing?.Invoke();
         }
     }
 
@@ -16,7 +18,7 @@ public class AlertZone : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent<Thief>(out Thief thief))
         {
-            _alert.LowerVolume();
+            ExitTresspassing?.Invoke();
         }
     }
 }

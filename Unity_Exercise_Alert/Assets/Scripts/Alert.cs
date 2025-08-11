@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
@@ -7,6 +8,7 @@ public class Alert : MonoBehaviour
     [SerializeField] private float _currentVolume = 0f;
     [SerializeField] private float _targetVolume = 0f;
 
+    private Coroutine _coroutine;
     private float _maxVolume = 1.0f;
     private float _minVolume = 0.0f;
     private float _volumeStep = 0.3f;
@@ -18,10 +20,9 @@ public class Alert : MonoBehaviour
         _audioSource.Play();
     }
 
-    private void Update()
+    private void Start()
     {
-        _audioSource.volume = Mathf.MoveTowards(_currentVolume, _targetVolume, _volumeStep * Time.deltaTime);
-        _currentVolume = _audioSource.volume;
+        StartCoroutine();
     }
 
     public void RaiseVolume()
@@ -32,5 +33,26 @@ public class Alert : MonoBehaviour
     public void LowerVolume()
     {
         _targetVolume = _minVolume;
+    }
+
+    public void StopCoroutine()
+    {
+        if (_coroutine != null)
+            StopCoroutine(_coroutine);
+    }
+
+    private void StartCoroutine()
+    {
+        _coroutine = StartCoroutine(ChangeVolumeSmootly());
+    }
+
+    private IEnumerator ChangeVolumeSmootly()
+    {
+        while (enabled)
+        {
+            _audioSource.volume = Mathf.MoveTowards(_currentVolume, _targetVolume, _volumeStep * Time.deltaTime);
+            _currentVolume = _audioSource.volume;
+            yield return null;
+        }
     }
 }

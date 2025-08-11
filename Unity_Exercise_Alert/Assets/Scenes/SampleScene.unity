@@ -373,7 +373,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 357fc2b7222a3cc4ab5643b5eac8be80, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 68efeb82abaee154799f41515bc99538, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.021
   m_Pitch: 1
@@ -761,7 +761,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ee3639621b55b4a810bfa4555af5e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _alert: {fileID: 306707555}
 --- !u!54 &792449638
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1178,7 +1177,7 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
@@ -1195,6 +1194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 100fd1f12b3b8f144a85ed15f115448c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _alert: {fileID: 306707555}
 --- !u!1 &1599232219
 GameObject:
   m_ObjectHideFlags: 0

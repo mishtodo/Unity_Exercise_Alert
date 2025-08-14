@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 95
+  controlID: 87
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -753,9 +753,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.15562153, y: 0.51690483, z: 2.6753745}
+    m_Target: {x: -0.094602585, y: 0.2705469, z: 2.3546367}
     speed: 2
-    m_Value: {x: -0.15562153, y: 0.51690483, z: 2.6753745}
+    m_Value: {x: -0.094602585, y: 0.2705469, z: 2.3546367}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -805,9 +805,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.25962865, y: 0.5251914, z: -0.17218687, w: -0.7919083}
   m_Size:
-    m_Target: 9.921093
+    m_Target: 10.221472
     speed: 2
-    m_Value: 9.921093
+    m_Value: 10.221472
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -871,9 +871,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: f85b0000
-      m_LastClickedID: 23544
-      m_ExpandedIDs: 26fbffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 26fbffff365c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1150,8 +1150,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 32}
-    m_SelectedIDs: 4e5d0000
-    m_LastClickedID: 23886
+    m_SelectedIDs: 525d0000
+    m_LastClickedID: 23890
     m_ExpandedIDs: 000000003e5d0000405d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1205,8 +1205,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: f85b0000
-    m_LastClickedInstanceID: 23544
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000008ab0000f27100001a6d0000fe710000fcb10000d25f0000000000000e910000d2640000
     m_RenameOverlay:

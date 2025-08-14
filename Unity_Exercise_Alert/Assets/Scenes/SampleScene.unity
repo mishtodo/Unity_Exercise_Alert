@@ -361,9 +361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 306707556}
-  _alertZone: {fileID: 1453719804}
   _currentVolume: 0
-  _targetVolume: 0
 --- !u!82 &306707556
 AudioSource:
   m_ObjectHideFlags: 0
@@ -903,6 +901,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 862149716}
+  - component: {fileID: 862149717}
   m_Layer: 0
   m_Name: House
   m_TagString: Untagged
@@ -929,8 +928,22 @@ Transform:
   - {fileID: 1779267844}
   - {fileID: 227150498}
   - {fileID: 469700215}
-  m_Father: {fileID: 1202981522}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &862149717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862149715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cc6415b5dabc724d843e629dcdcfef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _alert: {fileID: 306707555}
+  _alertZone: {fileID: 1453719804}
 --- !u!1001 &948892946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1126,7 +1139,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1665637961}
-  - {fileID: 862149716}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1453719801
@@ -1549,6 +1561,7 @@ SceneRoots:
   - {fileID: 963194228}
   - {fileID: 705507995}
   - {fileID: 1202981522}
+  - {fileID: 862149716}
   - {fileID: 306707557}
   - {fileID: 1453719802}
   - {fileID: 448889933}
